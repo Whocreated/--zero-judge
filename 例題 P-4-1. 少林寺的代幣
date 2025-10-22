@@ -1,0 +1,9 @@
+m = int(input())
+coin = [1,5,10,50]
+for i in range(m):
+    n = int(input())
+    num = 0
+    for c in coin[::-1]: # large to small
+        num += n//c # num of coin c
+        n %= c # remaining
+    print(num)
